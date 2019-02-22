@@ -1,0 +1,41 @@
+{:ziggurat {:app-name             "{{sanitized}}"
+            :env                  [:dev :keyword]
+            :nrepl-server         {:port [7011 :int]}
+            :stream-router        {:booking {:application-id       "{{sanitized}}"
+                                             :bootstrap-servers    "localhost:6667"
+                                             :stream-threads-count [1 :int]
+                                             :origin-topic         "kafka-topic-*"
+                                             :proto-class          "proto"}}
+            :datadog              {:host    "localhost"
+                                   :port    [8125 :int]
+                                   :enabled [false :bool]}
+            :sentry               {:enabled                   [false :bool]
+                                   :dsn                       "dummy"
+                                   :worker-count              [5 :int]
+                                   :queue-size                [5 :int]
+                                   :thread-termination-wait-s [1 :int]}
+            :rabbit-mq-connection {:host            "localhost"
+                                   :port            [5672 :int]
+                                   :prefetch-count  [3 :int]
+                                   :username        "guest"
+                                   :password        "guest"
+                                   :channel-timeout [2000 :int]}
+            :rabbit-mq            {:delay       {:queue-name           "{{sanitized}}_delay_queue"
+                                                 :exchange-name        "{{sanitized}}_delay_exchange"
+                                                 :dead-letter-exchange "{{sanitized}}_instant_exchange"
+                                                 :queue-timeout-ms     [5000 :int]}
+                                   :instant     {:queue-name    "{{sanitized}}_instant_queue"
+                                                 :exchange-name "{{sanitized}}_instant_exchange"}
+                                   :dead-letter {:queue-name    "{{sanitized}}_dead_letter_queue"
+                                                 :exchange-name "{{sanitized}}_dead_letter_exchange"}}
+            :retry                {:count   [5 :int]
+                                   :enabled [false :bool]}
+            :jobs                 {:instant {:worker-count   [4 :int]
+                                             :prefetch-count [4 :int]}}
+            :http-server          {:port         [8010 :int]
+                                   :thread-count [100 :int]}
+ ;; Above configs are required by ziggurat
+ ;; Add your configs below this
+ ;; eg - :key "value"
+ ;; Please refer clonfig to understand how the configs are structured
+ }}

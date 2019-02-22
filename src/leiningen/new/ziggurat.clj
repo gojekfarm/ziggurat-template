@@ -11,4 +11,12 @@
               :sanitized (name-to-path name)}]
     (main/info "Generating fresh 'lein new' ziggurat project.")
     (->files data
-             ["src/{{sanitized}}/foo.clj" (render "foo.clj" data)])))
+             ["CHANGELOG.md" (render "CHANGELOG.md" data)]
+             ["README.md" (render "README.md" data)]
+             ["test/{{sanitized}}/main_test.clj" (render "test/main_test.clj" data)]
+             ["test/{{sanitized}}/fixtures.clj" (render "test/fixtures.clj" data)]
+             [".gitignore" (render ".gitignore" data)]
+             ["src/{{sanitized}}/main.clj" (render "src/main.clj" data)]
+             ["project.clj" (render "project.clj" data)]
+             ["resources/config.test.edn" (render "resources/config.test.edn" data)]
+             ["resources/config.edn" (render "resources/config.edn" data)])))
