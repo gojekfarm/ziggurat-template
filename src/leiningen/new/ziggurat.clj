@@ -19,4 +19,6 @@
              ["src/{{sanitized}}/main.clj" (render "src/main.clj" data)]
              ["project.clj" (render "project.clj" data)]
              ["resources/config.test.edn" (render "resources/config.test.edn" data)]
-             ["resources/config.edn" (render "resources/config.edn" data)])))
+             ["resources/config.edn" (render "resources/config.edn" data)]
+             ["resources/log4j2.xml" (render "resources/log4j2.xml" data)]
+             ["resources/log4j2.test.xml" (render "resources/log4j2.test.xml" data)])))
