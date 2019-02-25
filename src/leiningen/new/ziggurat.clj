@@ -15,7 +15,7 @@
              ["README.md" (render "README.md" data)]
              ["test/{{sanitized}}/main_test.clj" (render "test/main_test.clj" data)]
              ["test/{{sanitized}}/fixtures.clj" (render "test/fixtures.clj" data)]
-             [".gitignore" (render ".gitignore" data)]
+             [".gitignore" (render "gitignore" data)]
              ["src/{{sanitized}}/main.clj" (render "src/main.clj" data)]
              ["project.clj" (render "project.clj" data)]
              ["resources/config.test.edn" (render "resources/config.test.edn" data)]
