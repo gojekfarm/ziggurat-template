@@ -1,22 +1,29 @@
 # ziggurat
 
-A Leiningen template for FIXME.
+A Leiningen template for applications that use ziggurat to process data streams from kafka. You can find ziggurat at https://github.com/gojektech/ziggurat.
 
 ## Usage
 
-FIXME
+If your application's name is `hello_world`
+```
+lein new ziggurat hello_world
+```
+
+Refer [lein template](https://github.com/technomancy/leiningen/blob/master/doc/TEMPLATES.md) docs for more context.
 
 ## License
+```
+Copyright 2018, GO-JEK Farm (http://gojek.farm)
 
-Copyright © 2019 FIXME
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
+    http://www.apache.org/licenses/LICENSE-2.0
 
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
