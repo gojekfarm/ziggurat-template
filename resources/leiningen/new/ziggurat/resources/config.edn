@@ -1,7 +1,7 @@
 {:ziggurat {:app-name             "{{sanitized}}"
             :env                  [:dev :keyword]
             :nrepl-server         {:port [7011 :int]}
-            :stream-router        {:booking {:application-id       "{{sanitized}}"
+            :stream-router        {:topic {:application-id       "{{sanitized}}"
                                              :bootstrap-servers    "localhost:6667"
                                              :stream-threads-count [1 :int]
                                              :origin-topic         "kafka-topic-*"

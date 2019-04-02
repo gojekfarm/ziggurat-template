@@ -19,4 +19,4 @@
   :success)
 
 (defn -main [& args]
-  (init/main start stop {:booking {:handler-fn main-func}}))
+  (init/main start stop {:topic {:handler-fn main-func}}))
